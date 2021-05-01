@@ -1,0 +1,41 @@
+{
+  "name": "vue-emoji-party",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node-emoji": "^1.8.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4",
+    "vue": "^2.6.12"
+  },
+  "scripts": {
+    "pretest": "npm run lint && tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "posttest": "npm run format",
+    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,css,md}\"",
+    "lint": "eslint . --cache --fix --ext .ts,.tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/daikiojm/vue-emoji-party.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daikiojm/vue-emoji-party/issues"
+  },
+  "homepage": "https://github.com/daikiojm/vue-emoji-party#readme",
+  "peerDependencies": {
+    "vue": "^2.6.12"
+  },
+  "dependencies": {
+    "node-emoji": "^1.10.0",
+    "party-js": "2.0.0-0"
+  }
+}
