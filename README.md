@@ -49,7 +49,7 @@ new Vue({
 
 ## Usage
 
-### Basic (random)
+### Default
 
 ```html
 <button v-emoji-party>emoji party</button>
@@ -59,6 +59,12 @@ new Vue({
 
 ```html
 <button v-emoji-party:emoji="'tada'">emoji party</button>
+```
+
+### Random
+
+```html
+<button v-emoji-party="{ random: true }">emoji party</button>
 ```
 
 ### With full options
@@ -76,6 +82,10 @@ new Vue({
   emoji party
 </button>
 ```
+
+## Example
+
+You can check it in the demo application [code](https://github.com/daikiojm/vue-emoji-party/blob/main/src/App.vue).
 
 [npm]: https://www.npmjs.com/package/vue-emoji-party
 [demo]: https://daikiojm.github.io/vue-emoji-party/
