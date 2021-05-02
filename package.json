@@ -1,12 +1,23 @@
 {
   "name": "vue-emoji-party",
   "version": "0.1.1",
+  "private": false,
+  "description": "Vue emoji directive with party.js",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "party.js",
+    "emoji"
+  ],
+  "author": "Daiki Ojima",
+  "license": "MIT",
   "files": [
     "dist/*"
   ],
   "main": "./dist/vue-emoji-party.common.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
+    "dev": "npm run serve:app",
     "serve:app": "vue-cli-service serve",
     "build:app": "vue-cli-service build",
     "build:source": "vue-cli-service build --target lib --name vue-emoji-party ./src/lib/index.ts && cp src/lib/index.d.ts dist/index.d.ts",
@@ -17,8 +28,7 @@
   },
   "dependencies": {
     "node-emoji": "^1.10.0",
-    "party-js": "2.0.0-0",
-    "vue": "^2.6.12"
+    "party-js": "2.0.0-0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
@@ -39,6 +49,10 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",
+    "vue": "^2.6.12",
     "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.12"
   }
 }
