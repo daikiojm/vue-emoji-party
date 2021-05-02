@@ -8,6 +8,7 @@ import { isString, isBoolean, isObject, isStringArray } from './util'
 
 const emojiShapePrefix = 'emoji_'
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type PartyConfettiConfigurationLazy = {
   count: any
   spread: any
@@ -19,6 +20,7 @@ type PartyConfettiConfigurationLazy = {
   sizeOverLifetime: any
   shapes: any
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 const getPartyShapes = (emojiKeys: string[]) =>
   emojiKeys.map((k) => emojiShapeKey(k))
@@ -108,6 +110,7 @@ const inserted: DirectiveFunction = (
 
   resolveEmojis()
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const eventCallback = (_ev: Event) => partyDirective(el, config)
 
   if (config.click) {
@@ -121,10 +124,7 @@ const inserted: DirectiveFunction = (
   el._partyDirective = eventCallback
 }
 
-const unbind: DirectiveFunction = (
-  el: HTMLElement,
-  _binding: VNodeDirective
-) => {
+const unbind: DirectiveFunction = (el: HTMLElement) => {
   if (!el._partyDirective) {
     return
   }

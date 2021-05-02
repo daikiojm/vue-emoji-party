@@ -1,17 +1,29 @@
 # vue-emoji-party
 
-...
+## Project setup
+```
+npm install
+```
 
-## Changelog
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-The changelog can be found on the [Releases page](ssh://git@github.com/daikiojm/vue-emoji-party/releases).
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## Contributing
+### Run your unit tests
+```
+npm run test:unit
+```
 
-Everyone is welcome to contribute. Please take a moment to review the [contributing guidelines](Contributing.md).
+### Lints and fixes files
+```
+npm run lint
+```
 
-## Authors and license
-
-[daikiojm](https://daikiojm.me) and [contributors](ssh://git@github.com/daikiojm/vue-emoji-party/graphs/contributors).
-
-MIT License, see the included [License.md](License.md) file.
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
