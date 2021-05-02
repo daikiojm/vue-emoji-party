@@ -6,8 +6,7 @@ export const isBoolean = (value: unknown): value is boolean => {
   return typeof value === 'boolean'
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export const isObject = (value: unknown): value is object => {
+export const isObject = (value: unknown) => {
   return typeof value === 'object'
 }
 

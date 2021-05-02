@@ -1,29 +1,74 @@
 # vue-emoji-party
 
-## Project setup
-```
-npm install
+![npm](https://img.shields.io/npm/v/vue-emoji-party)
+
+Vue emoji directive with [party.js](https://github.com/yiliansource/party-js)
+
+## Installation
+
+```bash
+npm i vue-emoji-party
+# or
+yarn add vue-emoji-party
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Setup
+
+### Basic
+
+```ts
+import Vue from 'vue'
+import App from './App.vue'
+import VueEmojiParty from 'vue-emoji-party'
+
+Vue.use(VueEmojiParty)
+
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+### With party.js settings
+
+```ts
+import Vue from 'vue'
+import App from './App.vue'
+import VueEmojiParty from 'vue-emoji-party'
+
+// See: https://party.js.org/docs/configuration
+Vue.use(VueEmojiParty, { party: { debug: true } })
+
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
 ```
 
-### Run your unit tests
-```
-npm run test:unit
+## Usage
+
+### Basic (random)
+
+```html
+<button v-emoji-party>emoji party</button>
 ```
 
-### Lints and fixes files
-```
-npm run lint
+### With specified emoji
+
+```html
+<button v-emoji-party:emoji="'tada'">emoji party</button>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### With full options
+
+```html
+<button
+  v-emoji-party="{
+    random: false,
+    emoji: ['tada', 'sushi'],
+    count: { min: 10, max: 200 },
+    click: true,
+    mouseover: false,
+  }"
+>
+  emoji party
+</button>
+```

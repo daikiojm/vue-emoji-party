@@ -5,7 +5,7 @@ import VueEmojiParty from './lib'
 
 Vue.config.productionTip = false
 
-Vue.use(VueEmojiParty)
+Vue.use(VueEmojiParty, { party: { debug: true } })
 
 new Vue({
   render: (h) => h(App),

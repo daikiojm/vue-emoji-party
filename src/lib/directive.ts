@@ -101,10 +101,6 @@ const inserted: DirectiveFunction = (
   el: HTMLElement,
   binding: VNodeDirective
 ) => {
-  party.settings.debug = true
-  party.settings.gravity = 800
-  party.settings.zIndex = 999
-
   const bindingConfig = parseConfiguration(binding)
   const config: Configuration = { ...defaultConfig, ...bindingConfig }
 

@@ -1,6 +1,17 @@
 <template>
   <div id="app">
-    <button v-emoji-party>テスト</button>
+    <button v-emoji-party:emoji="'tada'">emoji party</button>
+    <button
+      v-emoji-party="{
+        random: false,
+        emoji: ['tada', 'sushi'],
+        count: { min: 10, max: 200 },
+        click: true,
+        mouseover: false,
+      }"
+    >
+      emoji party
+    </button>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
