@@ -1,8 +1,11 @@
 # vue-emoji-party
 
 ![npm](https://img.shields.io/npm/v/vue-emoji-party)
+[![github pages](https://github.com/daikiojm/vue-emoji-party/actions/workflows/gh-pages.yml/badge.svg?branch=main)](https://github.com/daikiojm/vue-emoji-party/actions/workflows/gh-pages.yml)
 
 Vue emoji directive with [party.js](https://github.com/yiliansource/party-js)
+
+**[Demo](https://daikiojm.github.io/vue-emoji-party/)**
 
 ## Installation
 
