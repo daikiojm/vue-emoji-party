@@ -59,6 +59,10 @@
     "party.js",
     "emoji"
   ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/daikiojm/vue-emoji-party"
+  },
   "license": "MIT",
   "types": "dist/types/index.d.ts"
 }
