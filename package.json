@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "files": ["dist/*"],
   "main": "./dist/vue-emoji-party.common.js",
-  "types": "./dist/main.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name vue-emoji-party ./src/lib/index.ts && cp src/lib/index.d.ts dist/index.d.ts",
+    "serve:app": "vue-cli-service serve",
+    "build:app": "vue-cli-service build",
+    "build:source": "vue-cli-service build --target lib --name vue-emoji-party ./src/lib/index.ts && cp src/lib/index.d.ts dist/index.d.ts",
+    "build:dts": "tsc src/lib/*.ts -d --emitDeclarationOnly --declarationDir dist/types",
+    "build:lib": "npm run build:source; npm run build:dts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
