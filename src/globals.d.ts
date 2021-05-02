@@ -1,7 +1,7 @@
-export {};
+export {}
 
 declare global {
   interface HTMLElement {
-    _partyDirective?: EventListenerOrEventListenerObject;
+    _partyDirective?: EventListenerOrEventListenerObject
   }
 }

@@ -1,19 +1,19 @@
 export type Configuration = {
   // key of node-emoji.
-  emoji: string[];
+  emoji: string[]
   // If this option is true,
   // the emoji randomly obtained by the random method of node-emoji will be displayed.
-  random: boolean;
+  random: boolean
   // Randomly change the number of emojis to display based on the variation option in party.js.
   count: {
-    min: number;
-    max: number;
-  };
+    min: number
+    max: number
+  }
   // Emoji is displayed in the element click event.
-  click: boolean;
+  click: boolean
   // Emoji is displayed in the element hover event.
-  mouseover: boolean;
-};
+  mouseover: boolean
+}
 
 export const defaultConfig: Configuration = {
   emoji: [],
@@ -24,4 +24,4 @@ export const defaultConfig: Configuration = {
   },
   click: true,
   mouseover: false,
-};
+}

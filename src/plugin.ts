@@ -1,8 +1,18 @@
-import { PluginObject } from "vue";
-import { directive } from "./directive";
+import { PluginObject } from 'vue'
+import { EmojiPartyDirective } from './directive'
 
-export const plugin: PluginObject<any> = {
+const directiveName = 'emoji-party'
+
+export const plugin: PluginObject<never> = {
   install: (Vue) => {
-    Vue.directive("emoji-party", directive);
+    Vue.directive(directiveName, EmojiPartyDirective)
   },
-};
+}
+
+export const bootstrap = () => {
+  if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(plugin)
+  }
+}
+
+export { EmojiPartyDirective }
