@@ -1,41 +1,30 @@
 <template>
-  <div id="app">
-    <button v-emoji-party:emoji="'tada'">emoji party</button>
-    <button
-      v-emoji-party="{
-        random: false,
-        emoji: ['tada', 'sushi'],
-        count: { min: 10, max: 200 },
-        click: true,
-        mouseover: false,
-      }"
+  <div
+    id="app"
+    class="min-h-screen bg-blue-100 py-60 bg-gradient-to-br from-pink-400 to-blue-500"
+  >
+    <div
+      class="container mx-auto p-10 shadow-xl bg-white rounded-lg"
+      v-emoji-party="{ mouseover: true, count: { min: 5, max: 10 } }"
     >
-      emoji party
-    </button>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+      <h1 class="text-4xl font-bold mb-4 text-center">vue-emoji-party</h1>
+      <h3 class="text-center mb-4">Vue emoji directive with party.js</h3>
+      <div class="flex justify-center">
+        <button
+          class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          v-emoji-party
+        >
+          Click me 💩
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from '@vue/composition-api'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'App',
-  components: {
-    HelloWorld,
-  },
 })
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

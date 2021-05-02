@@ -3,34 +3,27 @@
   "version": "0.1.1",
   "private": false,
   "description": "Vue emoji directive with party.js",
-  "keywords": [
-    "vue",
-    "vuejs",
-    "party.js",
-    "emoji"
-  ],
   "author": "Daiki Ojima",
-  "license": "MIT",
+  "scripts": {
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "build:app": "vue-cli-service build",
+    "build:dts": "tsc src/lib/*.ts -d --emitDeclarationOnly --declarationDir dist/types",
+    "build:lib": "npm run build:source; npm run build:dts",
+    "build:source": "vue-cli-service build --target lib --name vue-emoji-party ./src/lib/index.ts && cp src/lib/index.d.ts dist/index.d.ts",
+    "dev": "npm run serve:app",
+    "serve:app": "vue-cli-service serve"
+  },
+  "main": "./dist/vue-emoji-party.common.js",
   "files": [
     "dist/*"
   ],
-  "main": "./dist/vue-emoji-party.common.js",
-  "types": "dist/types/index.d.ts",
-  "scripts": {
-    "dev": "npm run serve:app",
-    "serve:app": "vue-cli-service serve",
-    "build:app": "vue-cli-service build",
-    "build:source": "vue-cli-service build --target lib --name vue-emoji-party ./src/lib/index.ts && cp src/lib/index.d.ts dist/index.d.ts",
-    "build:dts": "tsc src/lib/*.ts -d --emitDeclarationOnly --declarationDir dist/types",
-    "build:lib": "npm run build:source; npm run build:dts",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
-  },
   "dependencies": {
     "node-emoji": "^1.10.0",
     "party-js": "2.0.0-0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.2",
     "@types/jest": "^24.0.19",
     "@types/node-emoji": "^1.8.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -39,20 +32,33 @@
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "@vue/composition-api": "^1.0.0-rc.8",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^1.0.3",
+    "autoprefixer": "^9",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "postcss": "^7",
     "prettier": "^2.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "typescript": "~4.1.5",
     "vue": "^2.6.12",
+    "vue-cli-plugin-tailwind": "~2.0.6",
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
     "vue": "^2.6.12"
-  }
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "party.js",
+    "emoji"
+  ],
+  "license": "MIT",
+  "types": "dist/types/index.d.ts"
 }
