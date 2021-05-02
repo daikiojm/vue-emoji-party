@@ -24,7 +24,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-website-
 
-      - name: Build App
       - run: yarn install --frozen-lockfile
       - run: yarn build:app
 
